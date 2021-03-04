@@ -10,6 +10,7 @@
     "lint:fx": "eslint src/**/*.ts --fix",
     "lint": "eslint src/**/*.ts",
     "start": "ts-node src/server.ts",
+    "build": "tsc -p .",
     "tsc": "tsc",
     "tscCheck": "tsc --noEmit"
   },
