@@ -4,7 +4,7 @@ import express from "express";
 import { MONITORS } from "./data/monitors";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.use(cors());
 
