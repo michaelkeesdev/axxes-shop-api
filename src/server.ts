@@ -4,7 +4,7 @@ import express from "express";
 import { MONITORS } from "./data/monitors";
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || "8080";
 
 app.use(cors());
 
@@ -13,7 +13,7 @@ app.get("/monitors", (req: express.Request, res: express.Response) => {
 });
 
 app.get("/monitors/:id", (req: express.Request, res: express.Response) => {
-  res.send(MONITORS.find(monitor => monitor.productId === req.params.id));
+  res.send(MONITORS.find((monitor) => monitor.productId === req.params.id));
 });
 
 app.listen(PORT, () => {

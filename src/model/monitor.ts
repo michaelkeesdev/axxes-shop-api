@@ -4,7 +4,7 @@ export interface Monitor {
   title: string;
   description: string;
   brand: string;
-  categoryList: string[],
+  categoryList: string[];
   seriesList: string[];
   inch: number;
   resolution: string;
@@ -19,4 +19,8 @@ export interface Monitor {
   inStock: boolean;
   isSellable: boolean;
   image: string;
+  meta: {
+    description: string;
+    title?: string;
+  };
 }
